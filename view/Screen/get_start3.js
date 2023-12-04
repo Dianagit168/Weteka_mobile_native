@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-const messagewtklogo = require("./../assets/messagewtk.png");
+const messagewtklogo = require("./../../assets/messagewtk.png");
 
 export default function Getstart3() {
   return (

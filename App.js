@@ -1,19 +1,30 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
-import Getstart1 from "./Screen/get_start1";
-import Getstart2 from "./Screen/get_start2";
-import WelcomeScreen from "./Screen/welcome_screen";
-import Getstart3 from "./Screen/get_start3";
-import LoginScreen from "./Screen/login";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
+import Getstart1 from "./view/Screen/get_start1";
+import Getstart2 from "./view/Screen/get_start2";
+import WelcomeScreen from "./view/Screen/welcome_screen";
+import Getstart3 from "./view/Screen/get_start3";
+import LoginScreen from "./view/Screen/login";
+import Register from "./view/Screen/register";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      
-      <LoginScreen />
+    <SafeAreaView>
+      <ScrollView>
+        <View style={styles.container}>
+          <Register />
 
-      <StatusBar style="auto" />
-    </View>
+          <StatusBar style="auto" />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

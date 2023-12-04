@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
-const krudwtkImg = require("./../assets/krudwtk.png");
+const krudwtkImg = require("./../../assets/krudwtk.png");
 
 const WelcomeScreen = () => {
   return (
