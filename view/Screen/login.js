@@ -149,6 +149,4 @@ const style = StyleSheet.create({
     flexDirection: "row",
   },
 });
-<View>
-  <Image source={wtkAngko} />
-</View>;
+

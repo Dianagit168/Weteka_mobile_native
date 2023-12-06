@@ -13,13 +13,15 @@ import WelcomeScreen from "./view/Screen/welcome_screen";
 import Getstart3 from "./view/Screen/get_start3";
 import LoginScreen from "./view/Screen/login";
 import Register from "./view/Screen/register";
+import ForgotPass from "./view/Screen/forgot_pass";
+import VerifyCode from "./view/Screen/verifycode";
 
 export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
         <View style={styles.container}>
-          <Register />
+          <VerifyCode/>
 
           <StatusBar style="auto" />
         </View>
