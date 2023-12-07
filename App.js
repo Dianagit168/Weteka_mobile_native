@@ -15,13 +15,15 @@ import LoginScreen from "./view/Screen/login";
 import Register from "./view/Screen/register";
 import ForgotPass from "./view/Screen/forgot_pass";
 import VerifyCode from "./view/Screen/verifycode";
+import RenewPassword from "./view/Screen/renew_pass";
+import HomeScreen from "./view/Screen/home_screen";
 
 export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
         <View style={styles.container}>
-          <VerifyCode/>
+          <HomeScreen />
 
           <StatusBar style="auto" />
         </View>

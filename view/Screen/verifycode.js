@@ -9,6 +9,7 @@ import {
   TextInput,
 } from "react-native";
 import React from "react";
+import brandingColor from "../components/branding_color";
 
 import Input from "../components/input";
 import BtnCustom from "../components/button_custom";
@@ -24,12 +25,17 @@ export default function VerifyCode() {
           <View style={{ paddingBottom: 20, paddingLeft: 100 }}>
             <Image source={wtklogo} />
           </View>
-          <Text style={{ color: "#0073FF", textAlign: "center" }}>
+          <Text style={{ color: brandingColor.blue60, textAlign: "center" }}>
             Enter that was sent to
           </Text>
 
           <Text
-            style={{ color: "#0073FF", textAlign: "center", paddingBottom: 20 }}
+            style={{
+              color: brandingColor.blue60,
+              fontWeight: "bold",
+              textAlign: "center",
+              paddingBottom: 20,
+            }}
           >
             example**@gmail.com
           </Text>
@@ -56,7 +62,7 @@ export default function VerifyCode() {
           </View>
           <Text
             style={{
-              color: "#0073FF",
+              color: brandingColor.blue60,
               textAlign: "center",
 
               paddingTop: 30,
@@ -67,7 +73,7 @@ export default function VerifyCode() {
           <TouchableOpacity>
             <Text
               style={{
-                color: "#0073FF",
+                color: brandingColor.blue60,
                 fontWeight: "bold",
                 textAlign: "center",
                 paddingTop: 5,
@@ -91,7 +97,7 @@ const style = StyleSheet.create({
   boxPin: {
     height: 45,
     width: 45,
-    backgroundColor: "skyblue",
+    backgroundColor: brandingColor.blue30,
     borderRadius: 16,
     alignItems: "center",
     justifyContent: "center",
