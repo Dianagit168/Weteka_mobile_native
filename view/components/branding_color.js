@@ -7,8 +7,8 @@ const brandingColor = {
   blueBlack60: "#4e5f73",
   blueBlack30: "#acb5bf",
   blueBlack3: "#e6e6e6",
-  white: " #ffffff",
-  pink: " #F16179",
+  white: "#ffffff",
+  pink: "#F16179",
   yellow: "#FCE24A",
 };
 

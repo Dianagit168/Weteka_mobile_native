@@ -5,24 +5,31 @@ const DATA = [
   {
     content: "Content1",
     tamNail: "TAMNAIL1",
+    author: "Author1",
+    pharagraph: "pharagraph1",
   },
   {
     content: "Content21",
     tamNail: "TAMNAIL2",
+    author: "Author2",
+    pharagraph: "pharagraph2",
   },
   {
     content: "Content3",
     tamNail: "TAMNAIL3",
+    author: "Author3",
+    pharagraph: "pharagraph3",
   },
 ];
 
 export default function ListContentCourse({
   content,
+  pharagraph,
   btn,
   onPress,
   height,
   width,
-  isFlatList = true,
+  padding,
 }) {
   return (
     <View>
@@ -33,25 +40,25 @@ export default function ListContentCourse({
         </Text>
       </View>
       <FlatList
-        showsVerticalScrollIndicator
         horizontal
         data={DATA}
         renderItem={({ item }) => (
           <View
             style={{
+              marginRight: 10,
               marginTop: 10,
 
-              justifyContent: "center",
-              alignItems: "center",
+              width: width,
+
+              paddingBottom: 8,
             }}
           >
             <View
               style={{
-                marginRight: 10,
                 marginBottom: 7,
                 height: height,
                 width: width,
-                borderRadius: 16,
+                borderRadius: 10,
                 backgroundColor: brandingColor.blue30,
                 justifyContent: "center",
                 alignItems: "center",
@@ -59,7 +66,9 @@ export default function ListContentCourse({
             >
               <Text>{item.tamNail}</Text>
             </View>
-            <Text>{item.content}</Text>
+            <Text style={styleListContentCourse.txtStyle}>{item.content}</Text>
+            <Text style={{ padding: padding }}> {pharagraph}</Text>
+            <Text>by {item.author}</Text>
           </View>
         )}
       />

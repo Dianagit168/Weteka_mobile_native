@@ -7,28 +7,39 @@ import {
   SafeAreaView,
   ScrollView,
 } from "react-native";
-import Getstart1 from "./view/Screen/get_start1";
-import Getstart2 from "./view/Screen/get_start2";
-import WelcomeScreen from "./view/Screen/welcome_screen";
-import Getstart3 from "./view/Screen/get_start3";
-import LoginScreen from "./view/Screen/login";
-import Register from "./view/Screen/register";
-import ForgotPass from "./view/Screen/forgot_pass";
-import VerifyCode from "./view/Screen/verifycode";
-import RenewPassword from "./view/Screen/renew_pass";
-import HomeScreen from "./view/Screen/home_screen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import { HomeScreen, LibraryScreen } from "./view/Screen";
+
+const Tab = createBottomTabNavigator();
+const screenOptions = {
+  tabBarShowLabel: false,
+  headerShown: false,
+  tabBarStyle: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    left: 0,
+    elevation: 0,
+    hight: 60,
+  },
+};
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={styles.container}>
-          <HomeScreen />
-
-          <StatusBar style="auto" />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          // options={{
+          //   tabBarIcon: ({ focused }) => {},
+          // }}
+        />
+        <Tab.Screen name="Library" component={LibraryScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 

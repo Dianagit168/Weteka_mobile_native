@@ -10,14 +10,13 @@ import {
 import React from "react";
 import HeaderBar from "../components/header_bar";
 import brandingColor from "../components/branding_color";
-import Input from "../components/input";
-import BtnCustom from "../components/button_custom";
-import BtnNoBack from "../components/button_noback";
+
 import Search from "../components/search";
 import ListContentCourse from "../components/listContentCourse";
-import ContentCourse from "../components/content_course";
 
-export default function HomeScreen() {
+import CarouselCustom from "../components/carousel_custom";
+
+export default function LibraryScreen() {
   return (
     <SafeAreaView style={{ paddingTop: 15, paddingBottom: 30 }}>
       <View>
@@ -27,34 +26,28 @@ export default function HomeScreen() {
         <Search
           object={"Explore"}
           leadingIcon={"search"}
-          placeHolder={"Find your courses"}
+          placeHolder={"Find your book"}
         />
-        <ContentCourse content={"Continue Course"} btn={"See all"} />
-        <View style={styleWidgetHomeScreen.containerOfChart}>
-          <Text> Chart do not complete</Text>
-        </View>
-        <View style={styleWidgetHomeScreen.containerOfChart}>
-          <Text> Chart do not complete</Text>
-        </View>
+
+        <CarouselCustom height={170} width={120} />
+
         <ListContentCourse
-          content={"Popular Course"}
-          btn={"See all"}
-          height={100}
-          width={140}
-        />
-        <ListContentCourse
-          content={"Library"}
+          content={"Book A"}
           btn={"See all"}
           height={170}
           width={120}
         />
         <ListContentCourse
-          content={"Kaset"}
-          pharagraph={'Phragraph'}
-          padding={8}
+          content={"Book B"}
           btn={"See all"}
-          height={100}
-          width={140}
+          height={170}
+          width={120}
+        />
+        <ListContentCourse
+          content={"Book C"}
+          btn={"See all"}
+          height={170}
+          width={120}
         />
       </ScrollView>
     </SafeAreaView>
