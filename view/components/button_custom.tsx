@@ -6,7 +6,7 @@ export default function BtnCustom({ obj, color, bor_radi }) {
     <View style={{ paddingBottom: 20, paddingTop: 10 }}>
       <TouchableOpacity style={style.btnContainer}>
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 17 }}>
-          {" "}
+         
           {obj}
         </Text>
       </TouchableOpacity>

@@ -21,7 +21,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={{ paddingTop: 15, paddingBottom: 30 }}>
       <View>
-        <HeaderBar scan={"scan"} bell={"bell-outline"} />
+        <HeaderBar scan={"scan"} bell={"bell-outline"} search={undefined} />
       </View>
       <ScrollView style={{ marginHorizontal: 20 }}>
         <Search
@@ -29,7 +29,11 @@ export default function HomeScreen() {
           leadingIcon={"search"}
           placeHolder={"Find your courses"}
         />
-        <ContentCourse content={"Continue Course"} btn={"See all"} />
+        <ContentCourse
+          content={"Continue Course"}
+          btn={"See all"}
+          onPress={undefined}
+        />
         <View style={styleWidgetHomeScreen.containerOfChart}>
           <Text> Chart do not complete</Text>
         </View>
@@ -41,20 +45,27 @@ export default function HomeScreen() {
           btn={"See all"}
           height={100}
           width={140}
+          pharagraph={undefined}
+          onPress={undefined}
+          padding={undefined}
         />
         <ListContentCourse
           content={"Library"}
           btn={"See all"}
           height={170}
           width={120}
+          pharagraph={undefined}
+          onPress={undefined}
+          padding={undefined}
         />
         <ListContentCourse
           content={"Kaset"}
-          pharagraph={'Phragraph'}
+          pharagraph={"Phragraph"}
           padding={8}
           btn={"See all"}
           height={100}
           width={140}
+          onPress={undefined}
         />
       </ScrollView>
     </SafeAreaView>

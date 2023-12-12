@@ -27,9 +27,10 @@ export default function ForgotPass() {
             object={"Emai"}
             leadingIcon={"email-outline"}
             trailingIcon={""}
+            placeHolder={''}
           />
 
-          <BtnCustom obj={"Get code"} />
+          <BtnCustom obj={"Get code"} color={undefined} bor_radi={undefined} />
         </View>
 
         <View>

@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet,
-  TouchableOpacity,
-  FlatList,
-} from "react-native";
+import { View, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
 import HeaderBar from "../components/header_bar";
 import brandingColor from "../components/branding_color";
@@ -16,39 +8,31 @@ import ListContentCourse from "../components/listContentCourse";
 
 import CarouselCustom from "../components/carousel_custom";
 
-export default function LibraryScreen() {
+export default function ContentScreen() {
   return (
     <SafeAreaView style={{ paddingTop: 15, paddingBottom: 30 }}>
       <View>
-        <HeaderBar scan={"scan"} bell={"bell-outline"} />
+        <HeaderBar scan={"scan"} bell={"bell-outline"} search={""} />
       </View>
       <ScrollView style={{ marginHorizontal: 20 }}>
         <Search
           object={"Explore"}
           leadingIcon={"search"}
-          placeHolder={"Find your book"}
+          placeHolder={"Find your course"}
         />
 
-        <CarouselCustom height={170} width={120} />
-
-        <ListContentCourse
-          content={"Book A"}
-          btn={"See all"}
+        <CarouselCustom
           height={170}
-          width={120}
+          width={250}
+          content={undefined}
+          pharagraph={undefined}
+          btn={undefined}
+          onPress={undefined}
+          padding={undefined}
         />
-        <ListContentCourse
-          content={"Book B"}
-          btn={"See all"}
-          height={170}
-          width={120}
-        />
-        <ListContentCourse
-          content={"Book C"}
-          btn={"See all"}
-          height={170}
-          width={120}
-        />
+        <View>
+          <Text>News</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
