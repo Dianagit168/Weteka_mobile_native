@@ -14,9 +14,9 @@ import { Bold, Heart, Rotate3D, X } from "lucide-react-native";
 import { Star } from "lucide-react-native";
 import { Forward } from "lucide-react-native";
 import { MessageCircle } from "lucide-react-native";
-
+import { AudioLines } from "lucide-react-native";
 import ChannelOrg from "../components/channel_org";
-import BtnCustom from "../components/button_custom";
+
 import SemiBoldText from "../components/semi_bold_text";
 import { transform } from "typescript";
 
@@ -24,9 +24,7 @@ export default function DetailVideoScreen() {
   return (
     <SafeAreaView style={{ marginHorizontal: 10 }}>
       <ScrollView>
-        <View style={styleForVideoDetail.videoContainer}>
-          <Text> This is video</Text>
-        </View>
+        <View style={styleForVideoDetail.videoContainer}></View>
 
         <View
           style={{
@@ -85,7 +83,7 @@ export default function DetailVideoScreen() {
   );
 }
 
-function ListVideo() {
+function ListVideo({ isAudio: boolean = true }) {
   return (
     <View style={styleForVideoDetail.backSubVideo}>
       <View style={styleForVideoDetail.subVideoContainer}>
@@ -97,12 +95,13 @@ function ListVideo() {
       </View>
       <View
         style={{
-          width: "55%",
+          width: "47%",
           marginLeft: 15,
+          marginRight: 15,
         }}
       >
         <SemiBoldText
-          contentT={"#Content video"}
+          contentT={"How to crush..."}
           fontSizeT={19}
           colorT={brandingColor.blueBlack100}
         />
@@ -111,6 +110,9 @@ function ListVideo() {
           fontSizeT={16}
           colorT={brandingColor.blueBlack60}
         />
+      </View>
+      <View style={{ width: 18 }}>
+        <AudioLines color="black" size={17} strokeWidth={2.7} />
       </View>
       <View style={styleForVideoDetail.backLesson}>
         <SemiBoldText contentT={"Lesson 1"} fontSizeT={11} colorT={"white"} />
